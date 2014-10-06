@@ -1,0 +1,59 @@
+
+<div class="customerStyles">
+	<div class="subViewHeader">
+		<h3>Order Details</h3>
+	</div>
+	<div class="subViewMain">
+		<div ng-show="hasOrders">
+			<table>
+				<tr>
+
+					<td>Order Number</td>
+					<td>{{order.orderNumber}}</td>
+				</tr>
+				<tr>
+					<td>Order Date</td>
+					<td>{{order.orderDate | date:'medium'}}</td>
+				</tr>
+
+			</table>
+
+			<table border="1" cellspacing=0>
+				<thead>
+					<th><a href=""
+						ng-click="predicate='itemCode';reverse=!reverse">Item Code</a></th>
+					<th><a href=""
+						ng-click="predicate='itemName';reverse=!reverse">Item Name</a></th>
+					<th><a href=""
+						ng-click="predicate='itemQuantity';reverse=!reverse">Item
+							Quantity</a></th>
+					<th><a href=""
+						ng-click="predicate='unitPrice';reverse=!reverse">Unit Price</a></th>
+					<th>Item Total</th>
+				</thead>
+				<tr
+					ng-repeat="items in order.orderItems | orderBy:predicate:reverse"
+					ng-class-odd="'odd'" ng-class-even="'even'">
+
+					<td>{{items.item.itemCode}}</td>
+
+					<td>{{items.item.itemName}}</td>
+
+					<td>{{items.itemQuantity}}</td>
+
+					<td>{{items.item.unitPrice | currency}}</td>
+					<td>{{items.itemQuantity*items.item.unitPrice | currency}}</td>
+				</tr>
+			</table>
+
+			<hr />
+			<p class="total">{{total | currency}}</p>
+		</div>
+		<div ng-show="!hasOrders" class="noOrder">No Orders for this
+			Customer. Use the Add Order Section to Add Start Adding</div>
+		<div ng-show="!hasOrders">
+			New Order Section.
+			<!-- TODO Complete this -->
+		</div>
+	</div>
+</div>

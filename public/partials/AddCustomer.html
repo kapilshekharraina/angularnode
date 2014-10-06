@@ -1,0 +1,74 @@
+
+<div class="customerStyles">
+	<div class="subViewHeader">
+		<h3>Add CUSTOMER</h3>
+	</div>
+	<div class="subViewMain">
+		<form ng-submit="addMainCustomer()">
+			<table>
+				<tr>
+
+					<td>Customer ID :</td>
+					<td>{{newCustomer.id}}</td>
+				</tr>
+				<tr>
+					<td>First Name :</td>
+					<td><input type="text" ng-model="newCustomer.firstName" required/></td>
+				</tr>
+				<tr>
+					<td>Last Name :</td>
+					<td><input type="text" ng-model="newCustomer.lastName" required/></td>
+
+				</tr>
+				<tr>
+					<td>Phone :</td>
+					<td><input type="text" ng-model="newCustomer.phone" required/></td>
+
+				</tr>
+			</table>
+			<input type="submit" value="Add Customer" />
+		</form>
+			<p ng-show="savedNewCustomer">Customer Added, You can add addresses using the form below.</p>
+		<div ng-show="savedNewCustomer">
+
+			<form ng-submit="addAddress()" name="customerAddress">
+				<table>
+					<tr>
+						<td>House Number :</td>
+						<td><input type="text" ng-model="newAddress.houseNo" required /></td>
+
+					</tr>
+					<tr>
+						<td>Street :</td>
+						<td><input type="text" ng-model="newAddress.street" required /></td>
+
+					</tr>
+					<tr>
+						<td>State :</td>
+						<td><input type="text" ng-model="newAddress.state" required /></td>
+
+					</tr>
+					<tr>
+						<td>Country :</td>
+						<td><input type="text" ng-model="newAddress.country" required /></td>
+
+					</tr>
+					<tr>
+						<td>Zip :</td>
+						<td><input type="text" ng-model="newAddress.zipCode" required /></td>
+
+					</tr>
+
+
+				</table>
+				<input type="submit" value="Add Address" />
+				<p ng-show="customerAddress.$valid">Valid Form, Ready for Submission Added !</p>
+			</form>
+
+		</div>
+
+
+
+	</div>
+
+</div>

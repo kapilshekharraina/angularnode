@@ -1,0 +1,41 @@
+
+<div class="customerStyles">
+	<div class="subViewHeader">
+		<h3>Customer Details</h3>
+	</div>
+	<div class="subViewMain">
+
+		<table>
+			<tr>
+
+				<td>Customer ID : </td>
+				<td>{{customer.id}}</td>
+			</tr>
+			<tr>
+				<td>First Name : </td>
+				<td>{{customer.firstName}}</td>
+			</tr>
+			<tr>
+				<td>Last Name : </td>
+				<td>{{customer.lastName}}</td>
+			</tr>
+			<tr>
+				<td>Phone : </td>
+				<td>{{customer.phone}}</td>
+			</tr>
+		</table>
+
+
+		<div ng-repeat="address in customer.addresses"
+			ng-show="address.verified">
+
+			<p class="addressmarker">
+				<b>ADDRESS - {{$index + 1}} </b>
+			</p>
+			{{address.houseNo}}<br /> {{address.street}}<br />
+			{{address.state}}<br /> {{address.country}} - {{address.zipCode}}
+
+		</div>
+	</div>
+
+</div>

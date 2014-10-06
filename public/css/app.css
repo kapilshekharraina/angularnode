@@ -1,0 +1,73 @@
+body {
+	margin-left: 35%;
+	width: 40%;
+	margin-top: 5%;
+	border: 1px;
+	border-style: dotted;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.header {
+	background-image: url("header.jpg");
+	height: 5%;
+	color: #FFFFFF;
+	
+}
+.header a{
+	
+	color: #FFFFFF;
+	
+}
+.menu{
+	
+}
+
+
+
+.subViewHeader {
+	margin-top: 2%;
+	background-color: #FACC2E;
+	text-align: center;
+}
+
+.subViewMain {
+	margin-left: 6%;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.subViewMain table {
+	border: 0px;
+	font-family: Arial;
+	font-size: 12pt;
+	text-align: left;
+}
+
+.homeStyles {
+	
+}
+
+.addressmarker {
+	background: yellow;
+	width: 40%;
+}
+
+.total {
+	font-size: 15pt;
+	margin-left: 52%;
+	background-color: #F5A9A9;
+	width: 20%;
+}
+
+.even {
+	background: #FFFFFF;
+}
+
+.odd {
+	background: #CEE3F6;
+}
+
+.noOrder {
+	background: #D8F781;
+}

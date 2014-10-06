@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="css/app.css">
+<script type="text/javascript" src="js/angular/angular.js"></script>
+<script type="text/javascript" src="js/angular/angular-route.min.js"></script>
+
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+<script type="text/javascript" src="js/services.js"></script>
+<script type="text/javascript" src="js/filters.js"></script>
+<body ng-app="coApp">
+
+	<div class="header" ng-controller="headerController">
+
+		<p class="menu">
+			<a href="#/">Home</a>&nbsp;| &nbsp; <a href="#/customer">Add
+				Customer</a> 
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img alt="Wait Image Here" src="images/loading1.gif" width="30px" height="25px" ng-show="showWaitImage"/>
+		</p>
+
+
+
+	</div>
+	<div ng-view></div>
+
+</body>
+</html>
